@@ -48,12 +48,14 @@ img {
 }
 /* MENU */
 
-/* .menu li {
-  display: flex;
-} */
+.menu li {
+  width: 100%;
+  text-align: center;
+  border-bottom: solid 1px rgb(201, 193, 193);
+}
 
 .menu {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
@@ -62,13 +64,15 @@ img {
   width: 100%;
 }
 li {
-  border: solid 1px gray;
   display: block;
 }
 
+ul {
+  padding: 0;
+}
 .menu a {
   text-decoration: none;
-  color: gray;
+  color: rgb(201, 193, 193);
 }
 /* OBSAH */
 .popisek {
@@ -97,13 +101,16 @@ h2 {
 }
 /* PATICKA */
 .paticka {
-  background: rgb(219, 221, 221);
+  background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,
-    rgba(219, 221, 221, 1) 0%,
-    rgba(193, 191, 188, 1) 100%
+    rgba(255, 255, 255, 1) 0%,
+    rgb(212, 206, 206) 95%,
+    rgb(196, 193, 191) 100%
   );
   color: gray;
+  padding: 2em;
+  font-size: 80%;
 }
 
 /* [href="http://cestovani.idnes.cz/island-a-roman-pech-0nh-/kolem-sveta.aspx?c=A140519_125122_kolem-sveta_tom"]
