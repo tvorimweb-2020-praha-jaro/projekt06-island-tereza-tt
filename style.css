@@ -27,6 +27,7 @@ body {
 }
 .hlavicka {
   background-image: url(images/island-hlavicka.jpg);
+  filter: brightness(90%);
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -39,6 +40,20 @@ body {
   overflow: scroll;
 }
 
+.autor:before {
+  content: "";
+  background-color: whitesmoke;
+  width: 60px;
+  height: 2px;
+  display: block;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.autor {
+  padding: 10px;
+}
 img {
   max-width: 100%;
 }
@@ -63,6 +78,21 @@ img {
   font-family: "Raleway", serif;
   width: 100%;
 }
+@media (min-width: 500px) {
+  .menu li {
+    width: 25%;
+    float: left;
+    margin: auto;
+    text-align: center;
+    border-left: solid 1px rgb(201, 193, 193);
+    border-top: solid 1px rgb(201, 193, 193);
+    margin-bottom: 3em;
+  }
+  .menu li:first-child {
+    border-left: none;
+  }
+}
+
 li {
   display: block;
 }
@@ -88,11 +118,48 @@ ul {
 h2 {
   font-family: "Raleway", serif;
 }
+
+h2:after {
+  content: "";
+  background-color: rgb(13, 155, 211);
+  width: 60px;
+  height: 4px;
+  display: block;
+  margin-top: 5px;
+}
 /* FOTOGALERIE */
 
 .galerie img {
   width: 500px;
 }
+@media (min-width: 500px) {
+  .galerie img {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    float: left;
+    width: calc(100% / 2);
+  }
+}
+
+@media (min-width: 500px) {
+  .popisek {
+    position: relative;
+    bottom: 60px;
+    color: white;
+    right: 20px;
+    width: 100%;
+    text-align: right;
+  }
+  .popisek a {
+    color: white;
+    text-decoration: none;
+  }
+  .foto .popisek {
+    display: none;
+  }
+}
+
 .foto .popisek {
   font-weight: bold;
 }
@@ -112,6 +179,11 @@ h2 {
   padding: 2em;
   font-size: 80%;
 }
+@media (min-width: 500px) {
+  .paticka {
+    clear: both;
+  }
+}
 
 /* [href="http://cestovani.idnes.cz/island-a-roman-pech-0nh-/kolem-sveta.aspx?c=A140519_125122_kolem-sveta_tom"]
 {
@@ -124,4 +196,80 @@ h2 {
 }
 .paticka a {
   color: grey;
+}
+
+/* pro PC */
+
+@media (min-width: 1000px) {
+  .kontejner {
+    width: 960px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -30px;
+  }
+  .menu {
+    display: block;
+    flex-direction: row;
+  }
+  .menu li {
+    display: block;
+    float: none;
+    margin-bottom: 0;
+    width: 80%;
+    text-align: left;
+    border-bottom: solid 1px rgb(201, 193, 193);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+  .horni-blok {
+    display: flex;
+    padding: 2em;
+  }
+  .horni-blok p:first-child {
+    margin-top: 0;
+  }
+  .menu {
+    align-content: flex-start;
+    text-align: left;
+  }
+  .horni-blok p {
+    padding-left: 2em;
+  }
+  .autor {
+    margin-bottom: 40px;
+  }
+  .prostredni-blok {
+    padding-left: 213px;
+  }
+  .galerie .foto {
+    margin: 0;
+
+    width: 320px;
+  }
+
+  .popisek {
+    position: relative;
+    bottom: 60px;
+    color: white;
+    right: 20px;
+    width: 100%;
+    text-align: right;
+  }
+  .popisek a {
+    color: white;
+    text-decoration: none;
+  }
+  .galerie {
+    background-color: salmon;
+  }
+  .foto .popisek {
+    display: block;
+    color: red;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }
