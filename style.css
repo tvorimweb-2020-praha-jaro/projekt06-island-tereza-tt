@@ -199,7 +199,9 @@ h2:after {
 }
 
 /* pro PC */
-
+h1 {
+  font-size: 3em;
+}
 @media (min-width: 1000px) {
   .kontejner {
     width: 960px;
@@ -246,7 +248,89 @@ h2:after {
   }
   .galerie .foto {
     margin: 0;
+    float: left;
+    width: 320px;
+    height: 180px;
+    background-color: salmon;
+  }
 
+  .galerie .foto img {
+    width: 320px;
+  }
+
+  .popisek {
+    position: relative;
+    bottom: 60px;
+    color: white;
+    right: 20px;
+    width: 100%;
+    text-align: right;
+  }
+
+  .foto .popisek {
+    display: none;
+    color: white;
+    font-size: 80%;
+    position: relative;
+    bottom: 50px;
+    right: 20px;
+  }
+  .foto .popisek a {
+    color: white;
+    text-decoration: none;
+    font-size: 80%;
+  }
+
+  .foto:hover .popisek {
+    display: block;
+  }
+}
+@media (min-width: 1000px) {
+  .kontejner {
+    width: 960px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -30px;
+  }
+  .menu {
+    display: block;
+    flex-direction: row;
+  }
+  .menu li {
+    display: block;
+    float: none;
+    margin-bottom: 0;
+    width: 80%;
+    text-align: left;
+    border-bottom: solid 1px rgb(201, 193, 193);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+  .horni-blok {
+    display: flex;
+    padding: 2em;
+  }
+  .horni-blok p:first-child {
+    margin-top: 0;
+  }
+  .menu {
+    align-content: flex-start;
+    text-align: left;
+  }
+  .horni-blok p {
+    padding-left: 2em;
+  }
+  .autor {
+    margin-bottom: 40px;
+  }
+  .prostredni-blok {
+    padding-left: 213px;
+  }
+  .galerie .foto {
+    margin: 0;
     width: 320px;
   }
 
@@ -263,13 +347,22 @@ h2:after {
     text-decoration: none;
   }
   .galerie {
-    background-color: salmon;
+    /* background-color: salmon; */
   }
   .foto .popisek {
-    display: block;
-    color: red;
+    display: none;
+    color: white;
+    font-size: 80%;
     position: relative;
-    top: 0;
-    left: 0;
+    bottom: 50px;
+    right: 20px;
+  }
+  .foto .popisek a {
+    color: white;
+    text-decoration: none;
+    font-size: 80%;
+  }
+  .foto:hover .popisek {
+    display: block;
   }
 }
